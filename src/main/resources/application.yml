@@ -1,0 +1,11 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+app:
+  jwt:
+    secret: cdyFoMbFOpKgWjCUVGnkuu6Kw51YBjpGSo6lxACK7GZo185fG3+l2FwlOlKGHyT2OY02En1ZgKUwVoyYg/wYqg==
+    expiry-seconds: 7200
+spring:
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
