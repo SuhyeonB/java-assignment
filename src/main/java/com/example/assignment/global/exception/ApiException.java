@@ -11,7 +11,7 @@ public class ApiException extends RuntimeException{
         this.code = code;
         this.status = switch (code) {
             case USER_ALREADY_EXISTS -> HttpStatus.CONFLICT;
-            case INVALID_CREDENTIALS, INVALID_TOKEN -> HttpStatus.UNAUTHORIZED;
+            case INVALID_CREDENTIALS, INVALID_TOKEN, INVALID_ROLE -> HttpStatus.UNAUTHORIZED;
             case ACCESS_DENIED -> HttpStatus.FORBIDDEN;
             case NOT_FOUND_USER -> HttpStatus.NOT_FOUND;
         };

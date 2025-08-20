@@ -1,6 +1,5 @@
 package com.example.assignment.global.config;
 
-import com.example.assignment.domain.user.role.Role;
 import com.example.assignment.global.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

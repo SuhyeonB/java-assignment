@@ -22,7 +22,6 @@ import java.util.List;
 @Component
 public class JwtUtil {
 
-    private static final String BEARER_PREFIX = "Bearer ";
     private static final long TOKEN_TIME = 2 * 60 * 60 * 1000L;
 
     @Value("${app.jwt.secret}")
@@ -39,8 +38,7 @@ public class JwtUtil {
     public String createToken(Long userId, String username, Role role) {
         Date date = new Date();
 
-        return BEARER_PREFIX +
-                Jwts.builder()
+        return Jwts.builder()
                         .setSubject(String.valueOf(userId))
                         .claim("username", username)
                         .claim("role", role.getRole())
@@ -51,7 +49,7 @@ public class JwtUtil {
     }
 
     public String substringToken(String tokenValue) {
-        if(StringUtils.hasText(tokenValue) && tokenValue.startsWith(BEARER_PREFIX)) {
+        if(StringUtils.hasText(tokenValue) && tokenValue.startsWith("Bearer ")) {
             return tokenValue.substring(7);
         }
         log.error("NOT FOUND TOKEN");

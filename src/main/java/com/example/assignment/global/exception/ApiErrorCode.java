@@ -5,5 +5,6 @@ public enum ApiErrorCode {
     INVALID_CREDENTIALS,
     ACCESS_DENIED,
     INVALID_TOKEN,
+    INVALID_ROLE,
     NOT_FOUND_USER
 }
