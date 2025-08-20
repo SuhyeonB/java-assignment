@@ -1,7 +1,6 @@
 package com.example.assignment.global.security;
 
 import com.example.assignment.domain.user.role.Role;
-import com.example.assignment.global.exception.ApiException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -16,12 +15,12 @@ import org.springframework.util.StringUtils;
 import java.security.Key;
 import java.util.Base64;
 import java.util.Date;
-import java.util.List;
 
 @Slf4j(topic = "JwtUtil")
 @Component
 public class JwtUtil {
 
+    private static final String BEARER_PREFIX = "Bearer";
     private static final long TOKEN_TIME = 2 * 60 * 60 * 1000L;
 
     @Value("${app.jwt.secret}")
@@ -38,7 +37,8 @@ public class JwtUtil {
     public String createToken(Long userId, String username, Role role) {
         Date date = new Date();
 
-        return Jwts.builder()
+        return BEARER_PREFIX +
+                Jwts.builder()
                         .setSubject(String.valueOf(userId))
                         .claim("username", username)
                         .claim("role", role.getRole())
