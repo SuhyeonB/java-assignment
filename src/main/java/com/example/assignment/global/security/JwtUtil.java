@@ -20,7 +20,7 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    private static final String BEARER_PREFIX = "Bearer";
+    private static final String BEARER_PREFIX = "Bearer ";
     private static final long TOKEN_TIME = 2 * 60 * 60 * 1000L;
 
     @Value("${app.jwt.secret}")

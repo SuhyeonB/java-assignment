@@ -23,6 +23,14 @@ public class User {
         this.role = role;
     }
 
+    public User(Long id, String username, String password, String nickname, Role role) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.nickname = nickname;
+        this.role = role;
+    }
+
     public void changeNickname(String nickname) { this.nickname = nickname; }
     public void grantAdmin() { this.role = Role.ADMIN; }
 }
