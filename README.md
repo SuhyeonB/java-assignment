@@ -56,3 +56,7 @@ JWT 액세스 토큰(2시간 유효)만 사용하며, Refresh 토큰은 사용�
 
 ### URL
 - http://52.23.235.123:8080/
+
+
+<img width="960" height="516" alt="image" src="https://github.com/user-attachments/assets/f8f49632-7c16-4d0b-a1f5-11f896afbfba" />
+<img width="960" height="516" alt="image" src="https://github.com/user-attachments/assets/ae59a72f-27d8-4cb2-adc2-601733c97f75" />
