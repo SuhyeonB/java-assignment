@@ -41,6 +41,6 @@ JWT 액세스 토큰(2시간 유효)만 사용하며, Refresh 토큰은 사용�
 {
   "error": {
     "code": "ERROR_CODE",
-    "message": "사람이 읽을 수 있는 메시지"
+    "message": "메시지"
   }
 }
