@@ -44,3 +44,15 @@ JWT 액세스 토큰(2시간 유효)만 사용하며, Refresh 토큰은 사용�
     "message": "메시지"
   }
 }
+
+
+----
+
+## Deployment
+- 배포 환경: AWS EC2 (Ubuntu 22.04, t2.micro)
+- JDK: Amazon Corretto 17
+- 빌드 툴: Gradle
+- 실행: `nohup java -jar assignment-0.0.1-SNAPSHOT.jar --server.port=8080 &`
+
+### URL
+- http://52.23.235.123:8080/
